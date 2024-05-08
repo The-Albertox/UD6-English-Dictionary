@@ -19,6 +19,9 @@ public class App {
                 case "1":
                 AddWord();
                     break;
+                case "2":
+                EliminateWord();
+                break;
             }
         }
     }
