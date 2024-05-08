@@ -30,8 +30,17 @@ public class App {
                     ShowByInitial();
                     break;
 
-                    case "5":
+                case "5":
                     ShowWordByInitial();
+                    break;
+
+                case "6":
+                    JOptionPane.showMessageDialog(null, "Hasta la proxima");
+                    exist = false;
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, "error opcion incorrecta");
                     break;
 
             }
@@ -96,18 +105,17 @@ public class App {
     }
 
     public static void ShowWordByInitial() {
-      
-            char initialToShow = JOptionPane.showInputDialog(null, "ingrese una inicial").charAt(0);
-            List<String> wordsByInitial = qualifier.getWordsByInitial(initialToShow);
-            if (wordsByInitial.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "no se ha encontrado la palabra");
-            } else {
-                JOptionPane.showMessageDialog(null, ("Palabras que comienzan con " + initialToShow + ":"));
-                for (String word : wordsByInitial) {
-                    JOptionPane.showMessageDialog(null, word);
-                }
-            }
-        } 
 
+        char initialToShow = JOptionPane.showInputDialog(null, "ingrese una inicial").charAt(0);
+        List<String> wordsByInitial = qualifier.getWordsByInitial(initialToShow);
+        if (wordsByInitial.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "no se ha encontrado la palabra");
+        } else {
+            JOptionPane.showMessageDialog(null, ("Palabras que comienzan con " + initialToShow + ":"));
+            for (String word : wordsByInitial) {
+                JOptionPane.showMessageDialog(null, word);
+            }
+        }
     }
 
+}
