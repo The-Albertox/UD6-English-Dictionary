@@ -1,3 +1,5 @@
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import app.net.resource.Menu;
@@ -28,6 +30,23 @@ public class App {
             JOptionPane.showMessageDialog(null, "la palabra se ha agregado correctamente");
         } 
 
-    }
+    
 
-
+    public static void EliminateWord() {
+        
+            String wordToDelete = JOptionPane.showInputDialog(null, "ingrese la palabara para eliminarla");
+            boolean exists = false;
+            for (List<String> words : qualifier.getWordByInitial().values()) {
+                if (words.remove(wordToDelete)) {
+                    exists = true;
+                    break;
+                }
+            }
+            if (exists) {
+                JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente");
+            } else {
+                JOptionPane.showMessageDialog(null, "La palabra no estaba almacenada");
+            }
+        }
+    
+}
