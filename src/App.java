@@ -28,7 +28,7 @@ public class App {
                     break;
                 case "4":
                     ShowByInitial();
-                    break;
+                    break;  
 
                 case "5":
                     ShowWordByInitial();
