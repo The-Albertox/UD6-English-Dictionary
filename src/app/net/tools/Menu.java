@@ -1,4 +1,4 @@
-package app.net.resource;
+package app.net.tools;
 
 import javax.swing.JOptionPane;
 

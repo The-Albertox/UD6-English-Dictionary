@@ -3,7 +3,7 @@ import java.util.Set;
 
 import javax.swing.JOptionPane;
 
-import app.net.resource.Menu;
+import app.net.tools.Menu;
 import app.net.wordQualifier.WordQualifier;
 
 public class App {
