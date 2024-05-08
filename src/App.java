@@ -17,39 +17,56 @@ public class App {
             option = menu.getMenu();
             switch (option) {
                 case "1":
-                AddWord();
+                    AddWord();
                     break;
                 case "2":
-                EliminateWord();
-                break;
+                    EliminateWord();
+                    break;
+                    case "3":
+                    ExistWord();
+                    break;
             }
         }
     }
 
     public static void AddWord() {
-        
-            String wordToAdd = JOptionPane.showInputDialog(null, "introduzca la palabra");
-            qualifier.addWord(wordToAdd);
-            JOptionPane.showMessageDialog(null, "la palabra se ha agregado correctamente");
-        } 
 
-    
+        String wordToAdd = JOptionPane.showInputDialog(null, "introduzca la palabra");
+        qualifier.addWord(wordToAdd);
+        JOptionPane.showMessageDialog(null, "la palabra se ha agregado correctamente");
+    }
 
     public static void EliminateWord() {
-        
-            String wordToDelete = JOptionPane.showInputDialog(null, "ingrese la palabara para eliminarla");
-            boolean exists = false;
-            for (List<String> words : qualifier.getWordByInitial().values()) {
-                if (words.remove(wordToDelete)) {
-                    exists = true;
-                    break;
-                }
-            }
-            if (exists) {
-                JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente");
-            } else {
-                JOptionPane.showMessageDialog(null, "La palabra no estaba almacenada");
+
+        String wordToDelete = JOptionPane.showInputDialog(null, "ingrese la palabara para eliminarla");
+        boolean exists = false;
+        for (List<String> words : qualifier.getWordByInitial().values()) {
+            if (words.remove(wordToDelete)) {
+                exists = true;
+                break;
             }
         }
-    
+        if (exists) {
+            JOptionPane.showMessageDialog(null, "Palabra eliminada correctamente");
+        } else {
+            JOptionPane.showMessageDialog(null, "La palabra no estaba almacenada");
+        }
+    }
+
+    public static void ExistWord() {
+
+        String wordToFind = JOptionPane.showInputDialog(null, "Ponga la palabra que desa buscar");
+        boolean exists = false;
+        for (List<String> words : qualifier.getWordByInitial().values()) {
+            if (words.contains(wordToFind)) {
+                exists = true;
+                break;
+            }
+        }
+        if (exists) {
+            JOptionPane.showMessageDialog(null, "la palabra se ha encontrado");
+        } else {
+            JOptionPane.showMessageDialog(null, "La palabra no se ha encontrado");
+        }
+    }
 }
