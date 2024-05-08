@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.JOptionPane;
 
@@ -22,8 +23,11 @@ public class App {
                 case "2":
                     EliminateWord();
                     break;
-                    case "3":
+                case "3":
                     ExistWord();
+                    break;
+                case "4":
+                    ShowByInitial();
                     break;
             }
         }
@@ -69,4 +73,21 @@ public class App {
             JOptionPane.showMessageDialog(null, "La palabra no se ha encontrado");
         }
     }
+
+    public static void ShowByInitial() {
+
+        JOptionPane.showMessageDialog(null, "Iniciales disponibles :");
+        Set<Character> initials = qualifier.getInitials();
+        if (initials.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "no hay iniciales disponibles en este momento");
+        } else {
+            for (char initial : initials) {
+                List<String> wordByInitials = qualifier.getWordsByInitial(initial);
+                if (!wordByInitials.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, initial);
+                }
+            }
+        }
+    }
+
 }
