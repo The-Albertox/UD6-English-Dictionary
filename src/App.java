@@ -17,20 +17,24 @@ public class App {
         while (exist) {
             option = menu.getMenu();
             switch (option) {
+                
                 case "1":
                     AddWord();
                     break;
-                case "2":
+                
+                    case "2":
                     EliminateWord();
                     break;
-                case "3":
+                
+                    case "3":
                     ExistWord();
                     break;
-                case "4":
+                
+                    case "4":
                     ShowByInitial();
                     break;  
-
-                case "5":
+                
+                    case "5":
                     ShowWordByInitial();
                     break;
 
@@ -38,7 +42,6 @@ public class App {
                     JOptionPane.showMessageDialog(null, "Hasta la proxima");
                     exist = false;
                     break;
-
                 default:
                     JOptionPane.showMessageDialog(null, "error opcion incorrecta");
                     break;

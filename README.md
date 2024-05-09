@@ -2,7 +2,7 @@
 
 # Manual de usuario
 
-este es el menu 
+este es el menu
 
 ![alt text](src\app\assets\images\menu.png)
 
@@ -12,7 +12,7 @@ si el usuario selcciona la opcion 1 se le solicitara que ingrese una palabra par
 
 ![alt text](src/app/assets/images/addWord2.png)
 
-si se ha añidido correctamente se mostrara un mensaje. 
+si se ha añidido correctamente se mostrara un mensaje.
 
 ![alt text](src/app/assets/images/addWord3.png)
 
@@ -36,7 +36,7 @@ se mostrara un mensaje al usuario.
 
 ![alt text](src/app/assets/images/eliminateWord4.png)
 
-si el usuario selecciona la opcion 3  si le solicitaa que ingrese la palabra que desea saber si existe.
+si el usuario selecciona la opcion 3 si le solicitaa que ingrese la palabra que desea saber si existe.
 
 ![alt text](src/app/assets/images/existWord.png)
 
@@ -44,7 +44,7 @@ si existe se mostara un mensaje de confirmacion.
 
 ![alt text](src/app/assets/images/existWord2.png)
 
-sin no se notificara al usuario que no se ha encontrado la palabra. 
+sin no se notificara al usuario que no se ha encontrado la palabra.
 
 ![alt text](src/app/assets/images/existWord3.png)
 
@@ -64,7 +64,7 @@ si el usuario seliccona la opcion 5 se solicitara que ingrese una inicial para v
 
 ![alt text](src/app/assets/images/showWordByInitials2.png)
 
-si se encuntran se mostraran las palabras. 
+si se encuntran se mostraran las palabras.
 
 ![alt text](src/app/assets/images/showWordByInitials3.png)
 
@@ -74,10 +74,10 @@ sino se mostrara un mensaje de que no se ha encontrado.
 
 ![alt text](src/app/assets/images/showWordByInitials5.png)
 
-
-#Documentatcion de clases
+# Documentatcion de clases
 
 En la carpeta net se encuentran las carpetas tools y wordQualifer
+
 - - En la carpeta tools:
 - Hay una clase Menu que devuelve un menu
 
@@ -85,9 +85,11 @@ En la carpeta net se encuentran las carpetas tools y wordQualifer
 - Hay una clase WordQualifer que tiene todo la solicitado en el enunciado del ejercio
 - Esta clase orginiza las palabras basandose en sus iniciales
 
-
 En App esta el menu con las opcion para que el usuario interactue con el programa
 mediante un switch case que tiene las siguientes opciones
--1
-
-
+- 1 añiadir palabras este metodo añade la palabra y muestra un mensaje de que que añadio correctamente
+- 2 eliminar palabra se pedira una palabra y se buscara si la palabra dada coinciode con alguna añiadida y se eliminara
+- 3 existe palabra se pedira una palabra y se bsucara si coincide con ulguna guardada si existe se mostrara un mensaje de que ha encontrado sino se encuentra se mostrara un mensaje de que nos eah encontrado
+- 4 mostrar inicales disponbles este busca las palabras guardadas y mostrara la iniciales de las palabras
+- 5 ver palabras por inicial este pedira una inicial y mediante esta inicial mostrara todas las palabras que empizen por 
+ella sino un mensaje de error
