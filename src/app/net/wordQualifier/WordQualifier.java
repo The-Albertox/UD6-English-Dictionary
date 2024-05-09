@@ -21,6 +21,7 @@ public class WordQualifier {
         this.wordByInitial = wordByInitial;
     }
 
+
     public void addWord(String word) {
         String sanitizedWord = sanitizeWord(word);
         char initial = sanitizedWord.charAt(0);
