@@ -94,7 +94,7 @@ mediante un switch case que tiene las siguientes opciones
 - 5 ver palabras por inicial este pedira una inicial y mediante esta inicial mostrara todas las palabras que empizen por 
 ella sino un mensaje de error
 
-photo of the author of this project
+foto del propietario de este proyecto y su colaboradora
 
 ![alt text](src/app/assets/images/authors.jpg)
 
