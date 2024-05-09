@@ -4,7 +4,7 @@
 
 este es el menu
 
-![alt text](src\app\assets\images\menu.png)
+![alt text](src/app/assets/images/menu.png)
 
 si el usuario selcciona la opcion 1 se le solicitara que ingrese una palabra para añiadirla.
 
